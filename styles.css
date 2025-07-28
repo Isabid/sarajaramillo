@@ -209,79 +209,49 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
-    /* Otras reglas @media aquí */
+  header h1 {
+    font-size: 28px;
+  }
 
-    body {
-        margin-right: 100px; /* Ajusta el margen derecho del cuerpo */
-    }
+  header p {
+    font-size: 18px;
+  }
 
-    header {
-        display: flex;
-        flex-direction: column; /* Cambia la dirección del eje principal a columna */
-        align-items: center; /* Centra los elementos en el eje transversal */
-    }
+  header .logo img {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 120px;
+  }
 
-    header .logo {
-        margin-top: 10px; /* Agrega un margen superior al logo para separarlo del texto */
+  .text-column {
+    margin-right: 0;
+  }
 
-    }
-    
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    header .logo img {
-        max-height: 100px; /* Ajusta la altura máxima del logo según sea necesario */
-    }
+  .column {
+    padding: 10px;
+  }
 
-    header .company-info {
-        margin-bottom: 10px;
-    }
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    header h1, header p {
-        margin: 0;
-        text-align: center; /* Centra el texto */
-    }
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
 
-    nav {
-        text-align: center;
-    }
+  nav {
+    white-space: normal;
+  }
 
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-        white-space: nowrap; /* Evita el salto de línea */
-    } 
-    
-
-
-    .flex-container {
-        flex-direction: column;
-    }
-
-    .column {
-        padding: 20px;
-        text-align: center;
-        max-width: 100%; /* Ajusta el ancho máximo de las columnas al 100% */
-        box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
-    }
-
-    .text-column {
-        margin-right: 100px;
-    }
-
-
-    section img {
-        width: 100%; /* Hace que las imágenes ocupen el ancho completo del contenedor */
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
-
-    .imagen-pequeña {
-        width: 30%; /* Ajusta el tamaño específico para las imágenes grandes */
-        /* Puedes agregar más estilos según sea necesario */
-    }
-
-    /* Ajustes para el espacio en blanco */
-    section {
-        overflow: hidden;
-    }
-
- }
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
