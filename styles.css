@@ -1,0 +1,287 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d587a; /* fondo de la pizarra */
+    color: #f9f7f7;
+}
+
+header {
+    align-items: center;
+    background-color: #f9fafb;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .company-info {
+    text-align: center; /* Alinea el texto al centro */
+    flex-grow: 1; /* Permite que la información de la empresa ocupe el espacio restante */
+}
+
+
+header h1 {
+    font-size: 45px; /* Ajusta el tamaño de la letra de Información & Marketing */
+}
+
+header p {
+    font-size: 28px; /* Ajusta el tamaño de la letra de Consultoría Empresarial */
+}
+
+header .logo img {
+    margin-left: 50px;
+    margin-right: 100px;
+    max-height: 230px; /* tamaño del logo e imagen  */
+}
+
+nav {
+    margin-top: 0px;
+    background-color: #15a89b;
+    color: #f4f6f4;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+nav a {
+    margin: 0 10px; /* Ajusta el espacio entre cada opción */
+    text-decoration: none;
+    color: #f4f6f4;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Agrega transición suave al cambio de color */
+}
+
+nav a:hover,
+nav a:active,
+nav a:visited {
+    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse, hacer clic o visitar */
+    color: #fff; /* Cambia el color del texto al pasar el mouse, hacer clic o visitar */
+}
+
+section:target {
+    padding: 30px; /* Ajusta el espaciado de la sección activa según sea necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas para destacar la sección activa */
+}
+
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(253, 251, 251, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Agrega transición suave al cambio de color */
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:active {
+    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse o hacer clic */
+    color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
+}
+
+.contacto {
+    display: inline-block;
+}
+
+.contacto-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.contacto:hover .contacto-content {
+    display: block;
+}
+
+.contacto-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Agrega transición suave al cambio de color */
+}
+
+.contacto-content a:hover,
+.contacto-content a:active {
+    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse o hacer clic */
+    color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
+}
+
+.parrafo-justificado {
+    text-align: justify;
+
+  }
+
+.parrafo-centrado {
+    text-align: center;
+
+  }
+
+.resaltado {
+    background-color: orange; /* Puedes cambiar "amarillo" al color que desees */
+    color: black; /* Puedes cambiar "negro" al color de texto que desees */
+    font-weight: bold; /* Esto es opcional, pero puede ayudar a resaltar más el texto */
+  }
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 20px auto; /* Centra horizontalmente y agrega espacio superior e inferior */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el espacio horizontal entre los íconos */
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 60px; /* Ajusta el tamaño de los íconos según tus necesidades */
+    height: 40px; /* Ajusta el tamaño de los íconos según tus necesidades */
+    border-radius: 50%; /* Para hacer los íconos redondos (opcional) */
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.text-column {
+    margin-right: 100px; /* Ajusta el margen entre la columna de texto y la imagen */
+}
+
+section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#regresarAlInicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #15a89b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sobre-nosotros a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+
+
+@media only screen and (max-width: 600px) {
+    /* Otras reglas @media aquí */
+
+    body {
+        margin-right: 100px; /* Ajusta el margen derecho del cuerpo */
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del eje principal a columna */
+        align-items: center; /* Centra los elementos en el eje transversal */
+    }
+
+    header .logo {
+        margin-top: 10px; /* Agrega un margen superior al logo para separarlo del texto */
+
+    }
+    
+
+    header .logo img {
+        max-height: 100px; /* Ajusta la altura máxima del logo según sea necesario */
+    }
+
+    header .company-info {
+        margin-bottom: 10px;
+    }
+
+    header h1, header p {
+        margin: 0;
+        text-align: center; /* Centra el texto */
+    }
+
+    nav {
+        text-align: center;
+    }
+
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        white-space: nowrap; /* Evita el salto de línea */
+    } 
+    
+
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%; /* Ajusta el ancho máximo de las columnas al 100% */
+        box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+    }
+
+    .text-column {
+        margin-right: 100px;
+    }
+
+
+    section img {
+        width: 100%; /* Hace que las imágenes ocupen el ancho completo del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .imagen-pequeña {
+        width: 30%; /* Ajusta el tamaño específico para las imágenes grandes */
+        /* Puedes agregar más estilos según sea necesario */
+    }
+
+    /* Ajustes para el espacio en blanco */
+    section {
+        overflow: hidden;
+    }
+
+ }
