@@ -211,7 +211,7 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header h1 {
         font-size: 28px;
     }
@@ -233,7 +233,7 @@ footer {
 
     nav a {
         display: block;
-        margin: 5vw 0;
+        margin: 5px 0;
     }
 
     .flex-container {
