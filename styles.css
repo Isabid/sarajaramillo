@@ -163,6 +163,9 @@ section:target {
 .flex-container {
     display: flex;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
 }
