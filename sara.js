@@ -52,3 +52,17 @@ document.querySelectorAll('nav a').forEach(function(enlace) {
         // Lógica para desplegar el menú aquí
     });
 });
+
+// Usando jQuery o JS
+document.querySelectorAll('.dropdown > a').forEach(el => {
+  el.addEventListener('touchstart', e => {
+    const parent = e.currentTarget.closest('.dropdown');
+    parent.classList.toggle('open');
+    e.preventDefault();
+  });
+  el.addEventListener('click', e => {
+    parent.classList.add('open');
+  });
+});
+
+$('.dropdown-menu').off('touchstart.dropdown.data-api');

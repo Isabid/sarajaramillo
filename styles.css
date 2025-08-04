@@ -95,18 +95,6 @@ section:target {
     color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
 }
 
-.contacto {
-    display: inline-block;
-}
-
-.contacto-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
 .contacto:hover .contacto-content {
     display: block;
 }
@@ -136,8 +124,8 @@ section:target {
   }
 
 .resaltado {
-    background-color: #fed063; /* Puedes cambiar "amarillo" al color que desees */
-    color: black; /* Puedes cambiar "negro" al color de texto que desees */
+    background-color: #15a89b; /* Puedes cambiar "amarillo" al color que desees */
+    color: #fff; /* Puedes cambiar "negro" al color de texto que desees */
     font-weight: bold; /* Esto es opcional, pero puede ayudar a resaltar más el texto */
   }
 
