@@ -170,7 +170,6 @@ section:target {
     display: flex;
     align-items: center;
 }
-
 .column {
     flex: 1;
     padding: 20px;
