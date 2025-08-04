@@ -72,8 +72,8 @@ section:target {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #007bff;
-    box-shadow: 0 8px 16px rgba(253, 251, 251, 0.2);
+    background-color: #15a89b;
+    box-shadow: 0 8px 16px #007BFF;
     z-index: 1;
 }
 
