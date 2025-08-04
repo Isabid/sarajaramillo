@@ -213,56 +213,74 @@ footer {
 
 
 
+/* ————— AÑADE ESTO justo después de tus estilos de escritorio ————— */
+@media only screen and (max-width: 768px) {
+  /* 1. Logo y encabezados menos grandes ↓ */
+  header .logo img {
+    display: block;
+    margin: 0 auto;
+    max-height: 120px;         /* desde 230px en desktop */
+    max-width: 80%;
+  }
+  header h1 {
+    font-size: 2.2rem;         /* de 45px ≃ 2.8 rem → más pequeño */
+    line-height: 1.2;
+  }
+  header p {
+    font-size: 1.2rem;         /* de 28px ≃ 1.75 rem → responsivo */
+    margin-top: 0.35em;
+  }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
+  /* 2. Navegación en columna para que no desborde */
+  nav {
+    white-space: normal;       /* permite que los enlaces salten de línea */
+    padding: 8px 0;
+  }
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 1rem;
+  }
 
-    header p {
-        font-size: 18px;
-    }
+  /* 3. Ajustes dropdown/contacto para móviles (touch friendly) */
+  .dropdown, .contacto {
+    display: block;
+    position: static;
+    margin: 0.5em 0;
+  }
+  .dropdown-content, .contacto-content {
+    position: static !important;
+    width: 100%;
+  }
 
-    header .logo img {
-        margin: 0 auto;
-        max-height: 120px;
-        display: block;
-    }
+  /* 4. Flex-columns se apilan verticalmente ↓ */
+  .flex-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .text-column {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+  .column {
+    padding: 0 1rem;
+    width: 100%;
+  }
 
-    nav {
-        padding: 5px;
-        font-size: 14px;
-    }
+  /* 5. Íconos sociales pequeños y céntrados ↓ */
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-column {
-        margin: 0;
-        padding: 10px;
-    }
-
-    .social-icons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-icons a {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .column {
-        padding: 10px;
-    }
+  /* 6. Ajustar otros tamaños si usas contenedores grandes */
+  section {
+    padding: 1rem;
+  }
 }
+/* —————————————————————————————————————— */
