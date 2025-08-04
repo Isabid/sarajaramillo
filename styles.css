@@ -72,12 +72,12 @@ section:target {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #007bff;
     box-shadow: 0 8px 16px rgba(253, 251, 251, 0.2);
     z-index: 1;
 }
 
-.dropdown:hover {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
