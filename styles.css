@@ -136,10 +136,16 @@ section:target {
   }
 
 .resaltado {
-    background-color: orange; /* Puedes cambiar "amarillo" al color que desees */
+    background-color: #fed063; /* Puedes cambiar "amarillo" al color que desees */
     color: black; /* Puedes cambiar "negro" al color de texto que desees */
     font-weight: bold; /* Esto es opcional, pero puede ayudar a resaltar más el texto */
   }
+
+.resaltar {
+    text-align: justify;
+    font-weight: bold;        /* texto en negrita */
+    font-size: 1rem;      /* ↑ tamaño de letra adaptado 1rem es el 100% del tamaño padre y 2rem es el doble*/
+}
 
 .social-icons {
     display: flex;
@@ -163,8 +169,6 @@ section:target {
 .flex-container {
     display: flex;
     align-items: center;
-    
-
 }
 
 .column {
@@ -211,7 +215,7 @@ footer {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header h1 {
         font-size: 28px;
     }
