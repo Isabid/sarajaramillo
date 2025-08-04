@@ -53,7 +53,7 @@ document.querySelectorAll('nav a').forEach(function(enlace) {
     });
 });
 
-// Usando jQuery o JS
+// Usando jQuery o JS para el scroll de android
 document.querySelectorAll('.dropdown > a').forEach(el => {
   el.addEventListener('touchstart', e => {
     const parent = e.currentTarget.closest('.dropdown');

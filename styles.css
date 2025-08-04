@@ -236,9 +236,17 @@ footer {
     position: static;
     margin: 0.5em 0;
   }
-  .dropdown-content, .contacto-content {
+  .contacto-content {
     position: static !important;
     width: 100%;
+
+  }
+  .dropdown-content {
+   position: absolute;
+   max-height: calc(100vh - 60px); /* ajustar según altura de header */
+   overflow-y: auto;
+   overflow-x: hidden;
+   -webkit-overflow-scrolling: touch;
   }
 
   /* 4. Flex-columns se apilan verticalmente ↓ */
