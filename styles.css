@@ -74,6 +74,8 @@ section:target {
     position: absolute;
     background-color: #15a89b;
     box-shadow: 0 8px 16px #007BFF;
+    list-style: none;
+    overflow-x: hidden;
     z-index: 1;
 }
 
@@ -243,11 +245,11 @@ footer {
   }
   .dropdown-content {
    position: absolute;
-   max-height: calc(100vh - 60px); /* ajustar según altura de header */
-   overflow-y: auto;
-   overflow-x: hidden;
+   overflow-y: auto !important;
+   max-height: calc(100vh - 60px);
    -webkit-overflow-scrolling: touch;
-  }
+   
+}
 
   /* 4. Flex-columns se apilan verticalmente ↓ */
   .flex-container {

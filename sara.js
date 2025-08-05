@@ -53,16 +53,37 @@ document.querySelectorAll('nav a').forEach(function(enlace) {
     });
 });
 
-// Usando jQuery o JS para el scroll de android
-document.querySelectorAll('.dropdown > a').forEach(el => {
-  el.addEventListener('touchstart', e => {
-    const parent = e.currentTarget.closest('.dropdown');
-    parent.classList.toggle('open');
-    e.preventDefault();
-  });
-  el.addEventListener('click', e => {
-    parent.classList.add('open');
-  });
-});
 
-$('.dropdown-menu').off('touchstart.dropdown.data-api');
+//para dar la opion scroll a android
+const btn = document.getElementById('menu-btn');
+  const menu = document.querySelector('.dropdown-content');
+  document.addEventListener('DOMContentLoaded', () => {
+    let isScroll = false;
+    menu.addEventListener('touchstart', () => isScroll = false);
+    menu.addEventListener('touchmove', () => isScroll = true);
+    menu.addEventListener('touchend', ev => {
+      if (isScroll) {
+        ev.preventDefault();
+        isScroll = false;
+      }
+    }, { passive: false });
+    // click solo si no hubo scroll
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', ev => {
+        if (isScroll) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          isScroll = false;
+        }
+      });
+    });
+  });
+
+  let abierto = false;
+  btn.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'touch') e.preventDefault();
+  });
+  btn.addEventListener('click', () => {
+    abierto = !abierto;
+    document.body.classList.toggle('dropdown-content', abierto);
+  });
