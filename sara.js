@@ -31,21 +31,6 @@ imagenesAmpliables.forEach((imagen) => {
     });
 });
 
-// Dar una funcionalidad especial para safari
-let clickedOnce = false;
-
-document.getElementById('tuElemento').addEventListener('click', function () {
-    if (clickedOnce) {
-        // Manejar doble clic
-        // Restaura al tamaño original
-        this.style.width = '300px'; // Ajusta según tu tamaño original
-    } else {
-        clickedOnce = true;
-        setTimeout(function () {
-            clickedOnce = false;
-        }, 300); // Ajusta el tiempo para detectar doble clic
-    }
-});
 
 document.querySelectorAll('nav a').forEach(function(enlace) {
     enlace.addEventListener('touchstart', function() {
@@ -55,35 +40,39 @@ document.querySelectorAll('nav a').forEach(function(enlace) {
 
 
 //para dar la opion scroll a android
-const btn = document.getElementById('menu-btn');
-  const menu = document.querySelector('.dropdown-content');
+  const btn = document.getElementById('menu-btn');
+  const menu = document.querySelector('.dropdown-menu');
   document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.querySelector('.dropdown-menu');
+    
     let isScroll = false;
     menu.addEventListener('touchstart', () => isScroll = false);
     menu.addEventListener('touchmove', () => isScroll = true);
     menu.addEventListener('touchend', ev => {
-      if (isScroll) {
-        ev.preventDefault();
-        isScroll = false;
-      }
-    }, { passive: false });
-    // click solo si no hubo scroll
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', ev => {
         if (isScroll) {
-          ev.preventDefault();
-          ev.stopPropagation();
-          isScroll = false;
+            ev.preventDefault();
+            isScroll = false;
         }
-      });
-    });
-  });
+    }, { passive: false });
 
-  let abierto = false;
-  btn.addEventListener('pointerdown', (e) => {
-    if (e.pointerType === 'touch') e.preventDefault();
-  });
-  btn.addEventListener('click', () => {
-    abierto = !abierto;
-    document.body.classList.toggle('dropdown-content', abierto);
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', ev => {
+            if (isScroll) {
+                ev.preventDefault();
+                ev.stopPropagation();
+                isScroll = false;
+            }
+        });
+    });
+
+    let abierto = false;
+    btn.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'touch') e.preventDefault();
+    });
+
+    btn.addEventListener('click', () => {
+        abierto = !abierto;
+        document.body.classList.toggle('nav-open', abierto);
+    });
   });

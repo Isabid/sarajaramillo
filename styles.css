@@ -202,6 +202,31 @@ footer {
   
 
 
+/* para probar menu de androind */
+body.nav-open .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.dropdown-menu li a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+  /* Solo móvil */
+ 
+/* hasta aqui llega la prueba
+
+
 
 /* ————— AÑADE ESTO justo después de tus estilos de escritorio ————— */
 @media only screen and (max-width: 768px) {
@@ -280,5 +305,15 @@ footer {
   section {
     padding: 1rem;
   }
+       /*esta parte es de la prueba */
+  .dropdown-menu {
+      overflow-y: auto !important;
+      max-height: calc(100vh - 60px);
+      -webkit-overflow-scrolling: touch;
+  }
+  #menu-btn {
+      /* opcional: estilos para botón tipo hamburguesa */
+  }
 }
+
 /* —————————————————————————————————————— */
