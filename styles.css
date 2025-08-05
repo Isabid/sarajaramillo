@@ -55,7 +55,7 @@ nav a {
 nav a:hover,
 nav a:active,
 nav a:visited {
-    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse, hacer clic o visitar */
+    background-color: #0d587a; /* Cambia el color de fondo al pasar el mouse, hacer clic o visitar */
     color: #fff; /* Cambia el color del texto al pasar el mouse, hacer clic o visitar */
 }
 
@@ -73,7 +73,7 @@ section:target {
     display: none;
     position: absolute;
     background-color: #15a89b;
-    box-shadow: 0 8px 16px #007BFF;
+    box-shadow: 0 8px 16px #0d587a;
     list-style: none;
     overflow-x: hidden;
     z-index: 1;
@@ -93,7 +93,7 @@ section:target {
 
 .dropdown-content a:hover,
 .dropdown-content a:active {
-    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse o hacer clic */
+    background-color: #0d587a; /* Cambia el color de fondo al pasar el mouse o hacer clic */
     color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
 }
 
@@ -111,7 +111,7 @@ section:target {
 
 .contacto-content a:hover,
 .contacto-content a:active {
-    background-color: #007BFF; /* Cambia el color de fondo al pasar el mouse o hacer clic */
+    background-color: #0d587a; /* Cambia el color de fondo al pasar el mouse o hacer clic */
     color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
 }
 
@@ -245,11 +245,11 @@ footer {
   }
   .dropdown-content {
    position: absolute;
-   overflow-y: auto !important;
-   max-height: calc(100vh - 60px);
+   max-height: calc(100vh - 60px); /* ajustar según altura de header */
+   overflow-y: auto;
+   overflow-x: hidden;
    -webkit-overflow-scrolling: touch;
-   
-}
+  }
 
   /* 4. Flex-columns se apilan verticalmente ↓ */
   .flex-container {
