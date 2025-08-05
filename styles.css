@@ -186,7 +186,7 @@ footer {
 #regresarAlInicio {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 100px;
     padding: 10px;
     background-color: #15a89b;
     color: #fff;
