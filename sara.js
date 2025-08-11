@@ -43,9 +43,6 @@ document.querySelectorAll('nav a').forEach(function(enlace) {
   const btn = document.getElementById('menu-btn');
   const menu = document.querySelector('.dropdown-menu');
   document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menu-btn');
-    const menu = document.querySelector('.dropdown-menu');
-    
     let isScroll = false;
     menu.addEventListener('touchstart', () => isScroll = false);
     menu.addEventListener('touchmove', () => isScroll = true);

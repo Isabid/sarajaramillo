@@ -79,7 +79,12 @@ section:target {
     z-index: 1;
 }
 
+
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body.nav-open .dropdown-menu {
     display: block;
 }
 
@@ -93,24 +98,6 @@ section:target {
 
 .dropdown-content a:hover,
 .dropdown-content a:active {
-    background-color: #0d587a; /* Cambia el color de fondo al pasar el mouse o hacer clic */
-    color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
-}
-
-.contacto:hover .contacto-content {
-    display: block;
-}
-
-.contacto-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s, color 0.3s; /* Agrega transición suave al cambio de color */
-}
-
-.contacto-content a:hover,
-.contacto-content a:active {
     background-color: #0d587a; /* Cambia el color de fondo al pasar el mouse o hacer clic */
     color: #fff; /* Cambia el color del texto al pasar el mouse o hacer clic */
 }
@@ -201,33 +188,6 @@ footer {
   }
   
 
-
-/* para probar menu de androind */
-body.nav-open .dropdown-menu {
-    display: block;
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background: #333;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-.dropdown-menu li a {
-    color: #fff;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-}
-
-  /* Solo móvil */
- 
-/* hasta aqui llega la prueba
-
-
-
 /* ————— AÑADE ESTO justo después de tus estilos de escritorio ————— */
 @media only screen and (max-width: 768px) {
   /* 1. Logo y encabezados menos grandes ↓ */
@@ -305,15 +265,5 @@ body.nav-open .dropdown-menu {
   section {
     padding: 1rem;
   }
-       /*esta parte es de la prueba */
-  .dropdown-menu {
-      overflow-y: auto !important;
-      max-height: calc(100vh - 60px);
-      -webkit-overflow-scrolling: touch;
-  }
-  #menu-btn {
-      /* opcional: estilos para botón tipo hamburguesa */
-  }
 }
 
-/* —————————————————————————————————————— */
