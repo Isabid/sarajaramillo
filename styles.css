@@ -143,6 +143,13 @@ body.nav-open .dropdown-menu {
     border-radius: 50%; /* Para hacer los íconos redondos (opcional) */
 }
 
+.escribenos img {
+    width: 60px; /* Ajusta el tamaño de los íconos según tus necesidades */
+    height: 40px; /* Ajusta el tamaño de los íconos según tus necesidades */
+    border-radius: 50%; /* Para hacer los íconos redondos (opcional) */
+}
+
+
 .flex-container {
     display: flex;
     align-items: center;
@@ -164,7 +171,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #15a89b;
     color: #fff;
     padding: 10px;
     text-align: center;
